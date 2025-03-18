@@ -42,24 +42,6 @@ Vue 3 e-commerce demo application integrated with Ecwid REST API.
 - **Styling**: SCSS
 - **Linting**: ESLint + Prettier
 
-## Project Structure
-src/
-├── api/           # API services (EcwidClient.ts)
-├── assets/        # Images & fonts
-├── components/    # Reusable UI components
-│   └── CartIcon.vue
-├── router/        # Navigation configuration
-├── stores/        # Pinia state management
-│   └── cart.ts    # Cart store logic
-├── styles/        # Global SCSS styles
-├── views/         # Page components
-│   ├── CartView.vue
-│   ├── CategoryView.vue
-│   ├── HomeView.vue
-│   └── ProductView.vue
-├── App.vue        # Root component
-└── main.ts        # Application entry
-
 
 ## Installation
 # Install dependencies
@@ -78,6 +60,23 @@ npm run type-check
 1. Create `.env` file in project root
 2. Use following template:
 ```ini
-VITE_STORE_ID=108362264
-VITE_API_TOKEN=public_RiNvjTVVzKLhFNWyzR5fNY68u1GMHLEs
+VITE_STORE_ID=StoreID
+VITE_API_TOKEN=Token
 
+## Project Structure
+src/
+├── api/           # API services (EcwidClient.ts)
+├── assets/        # Images & fonts
+├── components/    # Reusable UI components
+│   └── CartIcon.vue
+├── router/        # Navigation configuration
+├── stores/        # Pinia state management
+│   └── cart.ts    # Cart store logic
+├── styles/        # Global SCSS styles
+├── views/         # Page components
+│   ├── CartView.vue
+│   ├── CategoryView.vue
+│   ├── HomeView.vue
+│   └── ProductView.vue
+├── App.vue        # Root component
+└── main.ts        # Application entry
