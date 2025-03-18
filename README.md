@@ -6,8 +6,8 @@
 
 Vue 3 e-commerce demo application integrated with Ecwid REST API.
 
-![Category List](./screen1.jpg)
-![Shopping Cart](./screen2.png)
+![Category List](./public/screen1.jpg)
+![Shopping Cart](./public/screen2.png)
 
 ## Features
 
