@@ -42,8 +42,21 @@ Vue 3 e-commerce demo application integrated with Ecwid REST API.
 - **Styling**: SCSS
 - **Linting**: ESLint + Prettier
 
+## 🚀 Quick Start
 
-## Installation
+1. **Clone repository**
+```bash
+git clone https://github.com/your-username/ecwid-test.git
+cd ecwid-test
+
+## Environment Setup
+1. Create `.env` file in project root
+2. Use following template:
+```ini
+VITE_STORE_ID=StoreID
+VITE_API_TOKEN=Token
+
+
 # Install dependencies
 npm install
 
@@ -56,12 +69,7 @@ npm run build
 # Run type checker
 npm run type-check
 
-## Environment Setup
-1. Create `.env` file in project root
-2. Use following template:
-```ini
-VITE_STORE_ID=StoreID
-VITE_API_TOKEN=Token
+
 
 ## Project Structure
 src/
