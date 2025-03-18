@@ -46,8 +46,8 @@ Vue 3 e-commerce demo application integrated with Ecwid REST API.
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/your-username/ecwid-test.git
-cd ecwid-test
+git clone https://github.com/your-username/ECWID-test.git
+cd ECWID-test
 
 ## Environment Setup
 1. Create `.env` file in project root
