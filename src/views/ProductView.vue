@@ -21,7 +21,20 @@ const cleanHtml = computed(() => {
 <template>
   <div class="product-view">
     <div v-if="product" class="product-details">
-      <img :src="product.thumbnailUrl || '/placeholder-product.png'" class="product-image" />
+      <div class="image-container">
+    <img
+      :src="product.thumbnailUrl || '/placeholder-product.webp'"
+      :srcset="`
+        ${product.thumbnailUrl}?size=400w 400w,
+        ${product.imageUrl}?size=800w 800w
+      `"
+      sizes="(max-width: 600px) 100vw, 50vw"
+      loading="lazy"
+      decoding="async"
+      :alt="product.name"
+      class="product-image"
+    >
+      </div>
       <div class="product-info">
         <h1 class="product-title">{{ product.name }}</h1>
         <p class="product-description" v-html="cleanHtml"></p>
@@ -48,15 +61,29 @@ const cleanHtml = computed(() => {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     @media (min-width: $breakpoint-md) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(300px, 1fr) 1fr;
     }
   }
-
-  .product-image {
-    width: 100%;
-    object-fit: cover;
+  .image-container {
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
+    aspect-ratio: 3/4;
+
+    &::after {
+      content: "";
+      display: block;
+    }
   }
+  .product-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+  }
+
 
   .product-info {
     display: flex;

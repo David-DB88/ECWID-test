@@ -25,12 +25,20 @@ export interface Product {
   name: string;
   price: number;
   thumbnailUrl?: string;
+  imageUrl?: string;
+  originalImageUrl?: string;
   description?: string;
+  originalImage?: OrgImage
   categoryIds?: number[];
   sku?: string;
   createdAt?: string;
 }
 
+export interface OrgImage {
+  height: number,
+  url: string,
+  width: number
+}
 export const EcwidService = {
   async getCategories(params?: {
     limit?: number;
